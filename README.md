@@ -16,8 +16,6 @@ Any Arduino / ESP8266 board with an ADC (Analog Digital Converter).
 | GND    |        GND        |           GND            |        GND        |
 | OUT    |  A0 (ANALOG pin)  |        A0 (ADC0)         | A0 = SVP (GPIO36) |
 
-- ​
-
 ## Example
 
 Examples | Erriez RobotDyn Keypad 3x4 Analog:
