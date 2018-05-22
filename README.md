@@ -4,7 +4,7 @@
 This is a RobotDyn Keypad 3x4 with analog output library for Arduino.
 
 ## Hardware
-Any Arduino / ESP8266 board with an ADC (Analog Digital Converter).
+Any Arduino / ESP8266 / ESP32 board with an ADC (Analog Digital Converter).
 
 ![RobotDyn Keypad 3x4 Analog](https://raw.githubusercontent.com/Erriez/ErriezRobotDynKeypad3x4Analog/master/extras/RobotDynKeypad3x4Analog.png)
 
