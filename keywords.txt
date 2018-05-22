@@ -5,7 +5,7 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-Keypad3x4A			KEYWORD1
+RobotDynKeypad3x4Analog	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -15,7 +15,9 @@ getButtons			KEYWORD2
 #######################################
 # Instances (KEYWORD2)
 #######################################
+keypad				KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+KEYPAD_ANALOG_PIN	LITERAL1

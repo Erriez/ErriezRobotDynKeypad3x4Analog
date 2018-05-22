@@ -23,18 +23,16 @@
  */
 
 /*!
- * \file Example.ino
- * \brief RobotDyn Keypad 3x4 Analog example
+ * \file PrintADC.ino
+ * \brief Print ADC values RobotDyn Keypad 3x4 with analog output
  * \details
  *    Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
  */
 
 #include <Arduino.h>
 
-// Connect the keypad OUT pin to the ANALOG pin of an Arduino board
+// Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board
 #define KEYPAD_ANALOG_PIN   A0
-
-static int maxAnalogValue = 0;
 
 
 void setup(void)
@@ -54,15 +52,9 @@ void loop(void)
     // Read analog value
     analogValue = analogRead(KEYPAD_ANALOG_PIN);
 
-    // Print maximum ADC value for key 1 once. This is value 1023 for most Arduino boards,
-    // and around 991..995 for ESP8266 boards.
-    if ((analogValue >= 400) && (analogValue > maxAnalogValue)) {
-        maxAnalogValue = analogValue;
+    // Print analog value
+    Serial.println(analogValue, DEC);
 
-        Serial.println(F("Use the following macro in Example.ino:"));
-        Serial.print(F("#define MAX_ANALOG_VALUE  "));
-        Serial.println(analogValue, DEC);
-    }
-
-    delay(100);
+    // Wait some time
+    delay(250);
 }

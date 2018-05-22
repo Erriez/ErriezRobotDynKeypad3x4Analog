@@ -28,20 +28,24 @@
  * \details
  *     Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
  *
- *  0    = None         +----------------------+
- *  490  = Button 11    |o    OUT GND VCC     o|
- *  510  = Button 0     +----------------------+
- *  540  = Button 10    |                      |
- *  570  = Button 9     |    1     2     3     |
- *  600  = Button 8     |                      |
- *  640  = Button 7     |    4     5     6     |
- *  680  = Button 6     |                      |
- *  730  = Button 5     |    7     8     9     |
- *  790  = Button 4     |                      |
- *  850  = Button 3     |    10    0    11     |
- *  930  = Button 2     |o                    o|
- *  1023 = Button 1     +----------------------+
- *                             TOP  VIEW
+ *   Experimental ADC keypad values
+ * +------+---------+-------+--------+
+ * |  AVR | ESP8266 | ESP32 | Button |
+ * +------+---------+-------+--------+
+ * |    0 |      0  |    0  |  None  |     +----------------------+
+ * |  490 |    467  | 1700  |   11   |     |o    OUT GND VCC     o|
+ * |  510 |    490  | 1800  |    0   |     +----------------------+
+ * |  540 |    515  | 1900  |   10   |     |                      |
+ * |  570 |    546  | 2050  |    9   |     |    1     2     3     |
+ * |  600 |    580  | 2170  |    8   |     |                      |
+ * |  640 |    615  | 2300  |    7   |     |    4     5     6     |
+ * |  680 |    660  | 2500  |    6   |     |                      |
+ * |  730 |    700  | 2700  |    5   |     |    7     8     9     |
+ * |  790 |    760  | 2940  |    4   |     |                      |
+ * |  850 |    825  | 3250  |    3   |     |    10    0    11     |
+ * |  930 |    900  | 3700  |    2   |     |o                    o|
+ * | 1023 |    990  | 4095  |    1   |     +----------------------+
+ * +------+---------+-------+--------+            TOP  VIEW
  */
 
 #include "RobotDynKeypad3x4Analog.h"
@@ -52,7 +56,8 @@
  * \param analogPin
  *    Analog pin number
  * \param maxAnalogValue
- *    Maximum value of the ADC (1023 for most Arduino boards, around 991..995 for ESP8266 boards)
+ *    Maximum value of the ADC value may be slightly different. This may be compensated, but was
+ *    not needed during testing with several different boards.
  */
 RobotDynKeypad3x4Analog::RobotDynKeypad3x4Analog(uint8_t analogPin, uint16_t maxAnalogValue) :
         _analogPin(analogPin), _maxAnalogValue(maxAnalogValue)
@@ -73,6 +78,7 @@ int RobotDynKeypad3x4Analog::getButtons()
 
     analogValue = analogRead(_analogPin);
 
+#if ARDUINO_ARCH_AVR
     analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 1023);
 
     if (analogValue < 450) {
@@ -102,6 +108,69 @@ int RobotDynKeypad3x4Analog::getButtons()
     } else {
         button = 1;
     }
+#elif ARDUINO_ARCH_ESP8266
+    analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 995);
+
+    if (analogValue < 440) {
+        button = -1;
+    } else if (analogValue < 478) {
+        button = 11;
+    } else if (analogValue < 502) {
+        button = 0;
+    } else if (analogValue < 530) {
+        button = 10;
+    } else if (analogValue < 563) {
+        button = 9;
+    } else if (analogValue < 597) {
+        button = 8;
+    } else if (analogValue < 637) {
+        button = 7;
+    } else if (analogValue < 680) {
+        button = 6;
+    } else if (analogValue < 730) {
+        button = 5;
+    } else if (analogValue < 792) {
+        button = 4;
+    } else if (analogValue < 862) {
+        button = 3;
+    } else if (analogValue < 945) {
+        button = 2;
+    } else {
+        button = 1;
+    }
+#elif ARDUINO_ARCH_ESP32
+    analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 4095);
+
+    if (analogValue < 1600) {
+        button = -1;
+    } else if (analogValue < 1750) {
+        button = 11;
+    } else if (analogValue < 1850) {
+        button = 0;
+    } else if (analogValue < 1925) {
+        button = 10;
+    } else if (analogValue < 2110) {
+        button = 9;
+    } else if (analogValue < 2235) {
+        button = 8;
+    } else if (analogValue < 2400) {
+        button = 7;
+    } else if (analogValue < 2600) {
+        button = 6;
+    } else if (analogValue < 2820) {
+        button = 5;
+    } else if (analogValue < 3095) {
+        button = 4;
+    } else if (analogValue < 3475) {
+        button = 3;
+    } else if (analogValue < 3897) {
+        button = 2;
+    } else {
+        button = 1;
+    }
+#else
+#error "Unknown target"
+#endif
 
     // For debugging purposes
     // Serial.println(analogValue);

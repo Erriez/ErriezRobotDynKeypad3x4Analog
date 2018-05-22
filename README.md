@@ -6,17 +6,17 @@ This is a RobotDyn Keypad 3x4 with analog output library for Arduino.
 ## Hardware
 Any Arduino / ESP8266 board with an ADC (Analog Digital Converter).
 
-![RobotDyn Keypad 3x4 Analog](https://raw.githubusercontent.com/Erriez/ErriezRobotDynKeypad3x4Analog/master/extras/ErriezRobotDynKeypad3x4Analog.png)
+![RobotDyn Keypad 3x4 Analog](https://raw.githubusercontent.com/Erriez/ErriezRobotDynKeypad3x4Analog/master/extras/RobotDynKeypad3x4Analog.png)
 
 ## Pins
 
-| Keypad | Any Arduino board | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
-| ------ | :---------------: | :----------------------: | :-----------: |
-| VCC    |   5V (or 3.3V)    |           3V3            |      3V3      |
-| GND    |        GND        |           GND            |      GND      |
-| OUT    |  A0 (ANALOG pin)  |            A0            |       0       |
+| Keypad | Any Arduino board | WeMos D1 & R2 / Node MCU |   WeMos LOLIN32   |
+| ------ | :---------------: | :----------------------: | :---------------: |
+| VCC    |   5V (or 3.3V)    |           3V3            |        3V3        |
+| GND    |        GND        |           GND            |        GND        |
+| OUT    |  A0 (ANALOG pin)  |        A0 (ADC0)         | A0 = SVP (GPIO36) |
 
-- 
+- ​
 
 ## Example
 
@@ -33,16 +33,11 @@ Examples | Erriez RobotDyn Keypad 3x4 Analog:
 #include <Arduino.h>
 #include <RobotDynKeypad3x4Analog.h>
 
-// Connect the keypad OUT pin to the ANALOG pin of an Arduino board
+// Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board
 #define KEYPAD_ANALOG_PIN   A0
 
-// Maximum analog value on +3.3V or +5V analog conversion
-// Run Calibrate.ino when a button value does not match and update the value below.
-// This is value 1023 for most Arduino boards and around 991..995 for ESP8266 boards.
-#define MAX_ANALOG_VALUE    1023
-
 // Create keypad object
-RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN, MAX_ANALOG_VALUE);
+RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN);
 ```
 
 **Get buttons**

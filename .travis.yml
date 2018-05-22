@@ -34,5 +34,5 @@ install:
    - platformio update
 
 script:
-   - platformio ci --lib="." --project-conf=platformio/platformio.ini examples/Calibrate/Calibrate.ino
    - platformio ci --lib="." --project-conf=platformio/platformio.ini examples/Example/Example.ino
+   - platformio ci --lib="." --project-conf=platformio/platformio.ini examples/PrintADC/PrintADC.ino

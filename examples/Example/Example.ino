@@ -24,7 +24,7 @@
 
 /*!
  * \file Example.ino
- * \brief RobotDyn Keypad 3x4 Analog example
+ * \brief RobotDyn Keypad 3x4 with analog output example
  * \details
  *    Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
  */
@@ -32,16 +32,11 @@
 #include <Arduino.h>
 #include <RobotDynKeypad3x4Analog.h>
 
-// Connect the keypad OUT pin to the ANALOG pin of an Arduino board
+// Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board
 #define KEYPAD_ANALOG_PIN   A0
 
-// Maximum analog value on +3.3V or +5V analog conversion
-// Run Calibrate.ino when a button value does not match and update the value below.
-// This is value 1023 for most Arduino boards and around 991..995 for ESP8266 boards.
-#define MAX_ANALOG_VALUE    1023
-
 // Create keypad object
-RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN, MAX_ANALOG_VALUE);
+RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN);
 
 // Initial keypad state
 static int keypadStateLast = -2;

@@ -34,13 +34,23 @@
 
 #include <Arduino.h>
 
+#if ARDUINO_ARCH_AVR
+#define MAX_ANALOG_VALUE    1023
+#elif ARDUINO_ARCH_ESP8266
+#define MAX_ANALOG_VALUE    995
+#elif ARDUINO_ARCH_ESP32
+#define MAX_ANALOG_VALUE    4095
+#else
+#error "Unknown target"
+#endif
+
 /*!
  * \brief RobotDyn Keypad 3x4 Analog class
  */
 class RobotDynKeypad3x4Analog
 {
 public:
-    explicit RobotDynKeypad3x4Analog(uint8_t analogPin, uint16_t maxAnalogValue=1023);
+    explicit RobotDynKeypad3x4Analog(uint8_t analogPin, uint16_t maxAnalogValue=MAX_ANALOG_VALUE);
     virtual int getButtons();
 
 protected:
