@@ -73,7 +73,7 @@ void loop(void)
             Serial.println(F("Buttons up"));
         } else {
             // 0..11: Button down
-            Serial.print(F("Buttons "));
+            Serial.print(F("Button "));
             Serial.print(keypadState, DEC);
             Serial.println(F(" down"));
         }
