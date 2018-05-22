@@ -20,7 +20,7 @@ Any Arduino / ESP8266 board with an ADC (Analog Digital Converter).
 
 Examples | Erriez RobotDyn Keypad 3x4 Analog:
 
-* [Calibrate](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/Calibrate/Calibrate.ino)
+* [PrintADC](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/PrintADC/PrintADC.ino)
 * [Example](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/Example/Example.ino)
 
 ## Usage
@@ -53,7 +53,7 @@ int keypadState = keypad.getButtons();
 
 ## Documentation
 
-- [Doxygen online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog/)
+- [Doxygen online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog)
 - [Doxygen PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/master/docs/latex/refman.pdf)
 
 ## Library installation
