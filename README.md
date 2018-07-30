@@ -51,11 +51,18 @@ int keypadState = keypad.getButtons();
 
 - None.
 
+
 ## Documentation
 
 - [Doxygen online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog)
 - [Doxygen PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/master/docs/latex/refman.pdf)
 
+
 ## Library installation
 
 Please refer to the [Wiki](https://github.com/Erriez/ErriezArduinoLibrariesAndSketches/wiki) page.
+
+
+## Other Arduino Libraries and Sketches from Erriez
+
+* [Erriez Libraries and Sketches](https://github.com/Erriez/ErriezArduinoLibrariesAndSketches)
