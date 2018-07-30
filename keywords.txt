@@ -10,12 +10,12 @@ RobotDynKeypad3x4Analog	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-getButtons			KEYWORD2
+getButtons	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
 #######################################
-keypad				KEYWORD2
+keypad	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
