@@ -12,7 +12,7 @@ elseif(UNIX)
 endif()
 
 # Configure one sketch
-set(SKETCH      examples/Example/Example.ino)
+set(SKETCH examples/RobotDynKeypad3x4Analog/RobotDynKeypad3x4Analog.ino)
 # set(SKETCH      examples/PrintADC/PrintADC.ino)
 
 # Configure board, default Arduino UNO
