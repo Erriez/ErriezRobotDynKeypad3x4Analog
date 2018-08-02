@@ -31,7 +31,7 @@ branches:
 # Environment variables
 env:
   global:
-    - GH_REPO_NAME: RobotDynKeypad3x4Analog
+    - GH_REPO_NAME: ErriezRobotDynKeypad3x4Analog
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
     - GH_REPO_REF: github.com/Erriez/ErriezRobotDynKeypad3x4Analog.git
 
