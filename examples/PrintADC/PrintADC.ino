@@ -26,7 +26,8 @@
  * \file PrintADC.ino
  * \brief Print ADC values RobotDyn Keypad 3x4 with analog output
  * \details
- *    Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
+ *      Source:         https://github.com/Erriez/RobotDynKeypad3x4Analog
+ *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
  */
 
 #include <Arduino.h>

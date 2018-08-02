@@ -26,7 +26,8 @@
  * \file RobotDynKeypad3x4Analog.cpp
  * \brief RobotDyn Keypad 3x4 Analog library for Arduino
  * \details
- *     Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
+ *      Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
+ *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
  *
  *   Experimental ADC keypad values
  * +------+---------+-------+--------+
