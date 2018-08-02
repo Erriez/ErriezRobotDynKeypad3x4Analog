@@ -3,10 +3,12 @@
 
 This is a RobotDyn Keypad 3x4 with analog output library for Arduino.
 
+
 ## Hardware
 Any Arduino / ESP8266 / ESP32 board with an ADC (Analog Digital Converter).
 
 ![RobotDyn Keypad 3x4 Analog](https://raw.githubusercontent.com/Erriez/ErriezRobotDynKeypad3x4Analog/master/extras/RobotDynKeypad3x4Analog.png)
+
 
 ## Pins
 
@@ -16,12 +18,20 @@ Any Arduino / ESP8266 / ESP32 board with an ADC (Analog Digital Converter).
 | GND    |        GND        |           GND            |        GND        |
 | OUT    |  A0 (ANALOG pin)  |        A0 (ADC0)         | A0 = SVP (GPIO36) |
 
+
 ## Example
 
 Examples | Erriez RobotDyn Keypad 3x4 Analog:
 
 * [PrintADC](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/PrintADC/PrintADC.ino)
 * [Example](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/Example/Example.ino)
+
+
+## Documentation
+
+- [Online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog)
+- [Download PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/gh-pages/latex/ErriezRobotDynKeypad3x4Analog.pdf)
+
 
 ## Usage
 
@@ -47,15 +57,10 @@ RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN);
 int keypadState = keypad.getButtons();
 ```
 
+
 ## Library dependencies
 
 - None.
-
-
-## Documentation
-
-- [Online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog)
-- [Download PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/gh-pages/latex/ErriezRobotDynKeypad3x4Analog.pdf)
 
 
 ## Library installation
