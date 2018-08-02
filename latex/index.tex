@@ -1,0 +1,93 @@
+\href{https://travis-ci.org/ErriezRobotDynKeypad3x4Analog}{\tt }
+
+This is a Robot\+Dyn Keypad 3x4 with analog output library for Arduino.
+
+\subsection*{Hardware}
+
+Any Arduino / E\+S\+P8266 / E\+S\+P32 board with an A\+DC (Analog Digital Converter).
+
+
+
+\subsection*{Pins}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*4{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Keypad }&\PBS\centering {\bf Any Arduino board }&\PBS\centering {\bf We\+Mos D1 \& R2 / Node M\+CU }&\PBS\centering {\bf We\+Mos L\+O\+L\+I\+N32  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Keypad }&\PBS\centering {\bf Any Arduino board }&\PBS\centering {\bf We\+Mos D1 \& R2 / Node M\+CU }&\PBS\centering {\bf We\+Mos L\+O\+L\+I\+N32  }\\\cline{1-4}
+\endhead
+V\+CC &\PBS\centering 5V (or 3.\+3V) &\PBS\centering 3\+V3 &\PBS\centering 3\+V3 \\\cline{1-4}
+G\+ND &\PBS\centering G\+ND &\PBS\centering G\+ND &\PBS\centering G\+ND \\\cline{1-4}
+O\+UT &\PBS\centering A0 (A\+N\+A\+L\+OG pin) &\PBS\centering A0 (A\+D\+C0) &\PBS\centering A0 = S\+VP (G\+P\+I\+O36) \\\cline{1-4}
+\end{longtabu}
+
+
+\subsection*{Example}
+
+Examples $\vert$ Erriez Robot\+Dyn Keypad 3x4 Analog\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/PrintADC/PrintADC.ino}{\tt Print\+A\+DC}
+\item \href{https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/Example/Example.ino}{\tt Example}
+\end{DoxyItemize}
+
+\subsection*{Documentation}
+
+
+\begin{DoxyItemize}
+\item \href{https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog}{\tt Online H\+T\+ML}
+\item \href{https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/gh-pages/latex/ErriezRobotDynKeypad3x4Analog.pdf}{\tt Download P\+DF}
+\end{DoxyItemize}
+
+\subsection*{Usage}
+
+{\bfseries Initialization}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 #include <Arduino.h>
+3 #include <RobotDynKeypad3x4Analog.h>
+4 
+5 // Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board
+6 #define KEYPAD\_ANALOG\_PIN   A0
+7 
+8 // Create keypad object
+9 RobotDynKeypad3x4Analog keypad(KEYPAD\_ANALOG\_PIN);
+\end{DoxyCode}
+
+
+{\bfseries Get buttons}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Read buttons:
+3 // -1:    Buttons up
+4 // 0..11: Button down
+5 int keypadState = keypad.getButtons();
+\end{DoxyCode}
+
+
+\subsection*{Library dependencies}
+
+
+\begin{DoxyItemize}
+\item None.
+\end{DoxyItemize}
+
+\subsection*{Library installation}
+
+Please refer to the \href{https://github.com/Erriez/ErriezArduinoLibrariesAndSketches/wiki}{\tt Wiki} page.
+
+\subsection*{Other Arduino Libraries and Sketches from Erriez}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/Erriez/ErriezArduinoLibrariesAndSketches}{\tt Erriez Libraries and Sketches} 
+\end{DoxyItemize}
