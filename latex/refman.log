@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.8.2)  2 AUG 2018 19:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.8.3)  3 AUG 2018 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,9 +1209,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 
 Underfull \hbox (badness 1783) in paragraph at lines 14--15
-[]\T1/phv/m/n/10 Source[]: [][]\T1/pcr/bc/n/10 https[]://github.[]com/[]Erriez/
-[]Robot[]Dyn[]Keypad3x4[]Analog[][] \T1/phv/m/n/10 Documentation[]: [][]\T1/pcr
-/bc/n/10 https[]
+[]\T1/phv/m/n/10 Source[]: [][]\T1/pcr/m/n/10 https[]://github.[]com/[]Erriez/[
+]Robot[]Dyn[]Keypad3x4[]Analog[][] \T1/phv/m/n/10 Documentation[]: [][]\T1/pcr/
+m/n/10 https[]
  []
 
 ) (./_robot_dyn_keypad3x4_analog_8h.tex
@@ -1221,9 +1221,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 )
 Underfull \hbox (badness 1783) in paragraph at lines 19--152
-[]\T1/phv/m/n/10 Source[]: [][]\T1/pcr/bc/n/10 https[]://github.[]com/[]Erriez/
-[]Robot[]Dyn[]Keypad3x4[]Analog[][] \T1/phv/m/n/10 Documentation[]: [][]\T1/pcr
-/bc/n/10 https[]
+[]\T1/phv/m/n/10 Source[]: [][]\T1/pcr/m/n/10 https[]://github.[]com/[]Erriez/[
+]Robot[]Dyn[]Keypad3x4[]Analog[][] \T1/phv/m/n/10 Documentation[]: [][]\T1/pcr/
+m/n/10 https[]
  []
 
 [9
@@ -1266,7 +1266,7 @@ hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (15 pages, 109771 bytes).
+Output written on refman.pdf (15 pages, 109628 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  238 compressed objects within 3 object streams
