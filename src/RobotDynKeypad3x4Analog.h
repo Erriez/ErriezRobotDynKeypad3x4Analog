@@ -52,7 +52,7 @@ class RobotDynKeypad3x4Analog
 {
 public:
     explicit RobotDynKeypad3x4Analog(uint8_t analogPin, uint16_t maxAnalogValue=MAX_ANALOG_VALUE);
-    virtual int getButtons();
+    int getButtons();
 
 protected:
     uint16_t _maxAnalogValue;   //!< Max analog value
