@@ -12,3 +12,5 @@ rem git pull
 rem Build example(s)
 platformio ci --lib=".." --project-conf=platformio.ini ../examples/RobotDynKeypad3x4Analog/RobotDynKeypad3x4Analog.ino
 platformio ci --lib=".." --project-conf=platformio.ini ../examples/PrintADC/PrintADC.ino
+
+@pause

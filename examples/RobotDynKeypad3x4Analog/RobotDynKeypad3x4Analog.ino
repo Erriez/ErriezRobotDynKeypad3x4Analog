@@ -23,7 +23,6 @@
  */
 
 /*!
- * \file Example.ino
  * \brief RobotDyn Keypad 3x4 with analog output example
  * \details
  *      Source:         https://github.com/Erriez/RobotDynKeypad3x4Analog

@@ -52,9 +52,9 @@ include_directories(${LIB_SRC_DIR})
 generate_arduino_library(
         ${PROJECT_NAME}Lib
         SRCS
-            ${LIB_SRC_DIR}/RobotDynKeypad3x4Analog.cpp
+            ${LIB_SRC_DIR}/ErriezRobotDynKeypad3x4Analog.cpp
         HDRS
-            ${LIB_SRC_DIR}/RobotDynKeypad3x4Analog.h
+            ${LIB_SRC_DIR}/ErriezRobotDynKeypad3x4Analog.h
 )
 
 # Configure project

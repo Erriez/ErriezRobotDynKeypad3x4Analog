@@ -23,7 +23,7 @@
  */
 
 /*!
- * \file RobotDynKeypad3x4Analog.cpp
+ * \file ErriezRobotDynKeypad3x4Analog.cpp
  * \brief RobotDyn Keypad 3x4 Analog library for Arduino
  * \details
  *      Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
@@ -49,7 +49,7 @@
  * +------+---------+-------+--------+            TOP  VIEW
  */
 
-#include "RobotDynKeypad3x4Analog.h"
+#include "ErriezRobotDynKeypad3x4Analog.h"
 
 
 /*!
