@@ -29,7 +29,6 @@
  *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
  */
 
-#include <Arduino.h>
 #include <ErriezRobotDynKeypad3x4Analog.h>
 
 // Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board

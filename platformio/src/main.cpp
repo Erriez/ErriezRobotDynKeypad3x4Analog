@@ -29,7 +29,6 @@
  *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
  */
 
-#include <Arduino.h>
 #include <ErriezRobotDynKeypad3x4Analog.h>
 
 
