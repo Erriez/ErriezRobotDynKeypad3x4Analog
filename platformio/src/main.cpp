@@ -23,65 +23,57 @@
  */
 
 /*!
- * \file Demo.ino
- * \brief LCD Keypad Shield example demo
+ * \brief RobotDyn Keypad 3x4 with analog output example
  * \details
- *    Source: https://github.com/Erriez/ErriezLCDKeypadShield
+ *      Source:         https://github.com/Erriez/RobotDynKeypad3x4Analog
+ *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
  */
 
 #include <Arduino.h>
-#include <LCDKeypadShield.h>
+#include <RobotDynKeypad3x4Analog.h>
 
-LCDKeypadShield shield;
+
+// Connect the keypad OUT pin to the ANALOG pin of an Arduino / ESP8266 / ESP32 board
+#define KEYPAD_ANALOG_PIN   A0
+
+// Create keypad object
+RobotDynKeypad3x4Analog keypad(KEYPAD_ANALOG_PIN);
+
+// Initial keypad state
+static int keypadStateLast = -2;
 
 
 void setup(void)
 {
-    shield.backlightOn();
-    shield.print(F("Push the buttons"));
-
-    // Backlight control
-    for (uint8_t i = 0; i < 3; i++) {
-        // Turn backlight off
-        shield.backlightOff();
-        delay(500);
-
-        // Turn backlight on
-        shield.backlightOn();
-        delay(500);
+    // Initialize serial port
+    Serial.begin(115200);
+    while (!Serial) {
+        ;
     }
+    Serial.println(F("RobotDyn Keypad 3x4 Analog example"));
 }
 
 void loop(void)
 {
-    // Display seconds elapsed since power-up
-    shield.setCursor(9, 1);
-    shield.print(millis() / 1000);
-
-    // Set cursor start second line
-    shield.setCursor(0, 1);
+    int keypadState;
 
     // Read buttons
-    switch (shield.getButtons()) {
-        case ButtonRight:
-            shield.print(F("RIGHT "));
-            break;
-        case ButtonLeft:
-            shield.print(F("LEFT  "));
-            break;
-        case ButtonUp:
-            shield.print(F("UP    "));
-            break;
-        case ButtonDown:
-            shield.print(F("DOWN  "));
-            break;
-        case ButtonSelect:
-            shield.print(F("SELECT"));
-            break;
-        case ButtonNone:
-            shield.print(F("NONE  "));
-            break;
-        default:
-            break;
+    keypadState = keypad.getButtons();
+
+    // Print button state only when it changed
+    if (keypadState != keypadStateLast) {
+        keypadStateLast = keypadState;
+
+        if (keypadState == -1) {
+            // -1: All buttons up
+            Serial.println(F("Buttons up"));
+        } else {
+            // 0..11: Button down
+            Serial.print(F("Button "));
+            Serial.print(keypadState, DEC);
+            Serial.println(F(" down"));
+        }
     }
+
+    delay(100);
 }
