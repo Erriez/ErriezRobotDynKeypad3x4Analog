@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.8.4)  4 AUG 2018 09:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.8.4)  4 AUG 2018 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,7 +1202,7 @@ Underfull \hbox (badness 10000) detected at line 75
 
 ) [8]
 Chapter 5.
-(./_robot_dyn_keypad3x4_analog_8cpp.tex
+(./_erriez_robot_dyn_keypad3x4_analog_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
@@ -1214,7 +1214,7 @@ Underfull \hbox (badness 1783) in paragraph at lines 14--15
 m/n/10 https[]
  []
 
-) (./_robot_dyn_keypad3x4_analog_8h.tex
+) (./_erriez_robot_dyn_keypad3x4_analog_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
@@ -1241,7 +1241,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: BD06CCA4E9ED8100F29CDC64F05372CF;3760.
+(rerunfilecheck)             Checksum: D8B2B732B434AB793E6007592A656546;3820.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1250,8 +1250,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
  14708 strings out of 495028
- 208656 string characters out of 6181498
- 299437 words of memory out of 5000000
+ 208712 string characters out of 6181498
+ 299451 words of memory out of 5000000
  17617 multiletter control sequences out of 15000+600000
  63578 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1266,7 +1266,7 @@ hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (15 pages, 109638 bytes).
+Output written on refman.pdf (15 pages, 109729 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  238 compressed objects within 3 object streams
