@@ -79,7 +79,7 @@ int RobotDynKeypad3x4Analog::getButtons()
 
     analogValue = analogRead(_analogPin);
 
-#if ARDUINO_ARCH_AVR
+#if defined(ARDUINO_ARCH_AVR)
     analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 1023);
 
     if (analogValue < 450) {
@@ -109,7 +109,7 @@ int RobotDynKeypad3x4Analog::getButtons()
     } else {
         button = 1;
     }
-#elif ARDUINO_ARCH_ESP8266
+#elif defined(ARDUINO_ARCH_ESP8266)
     analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 995);
 
     if (analogValue < 440) {
@@ -139,7 +139,7 @@ int RobotDynKeypad3x4Analog::getButtons()
     } else {
         button = 1;
     }
-#elif ARDUINO_ARCH_ESP32
+#elif defined(ARDUINO_ARCH_ESP32) || defined(ARDUINO_SAM_DUE)
     analogValue = (int)map(analogValue, 0, _maxAnalogValue, 0, 4095);
 
     if (analogValue < 1600) {

@@ -41,6 +41,8 @@
 #define MAX_ANALOG_VALUE    995
 #elif ARDUINO_ARCH_ESP32
 #define MAX_ANALOG_VALUE    4095
+#elif ARDUINO_SAM_DUE
+#define MAX_ANALOG_VALUE    4095
 #else
 #error "Unknown target"
 #endif
