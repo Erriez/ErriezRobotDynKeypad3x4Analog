@@ -27,7 +27,7 @@
  * \brief RobotDyn Keypad 3x4 Analog library for Arduino
  * \details
  *      Source: https://github.com/Erriez/RobotDynKeypad3x4Analog
- *      Documentation:  https://erriez.github.io/RobotDynKeypad3x4Analog
+ *      Documentation: https://erriez.github.io/RobotDynKeypad3x4Analog
  */
 
 #ifndef ERRIEZ_ROBOT_DYN_KEYPAD_3X4_ANALOG_H_
@@ -55,8 +55,8 @@ public:
     int getButtons();
 
 protected:
-    uint16_t _maxAnalogValue;   //!< Max analog value
     uint8_t  _analogPin;        //!< Analog pin number
+    uint16_t _maxAnalogValue;   //!< Max analog value
 };
 
 #endif // ERRIEZ_ROBOT_DYN_KEYPAD_3X4_ANALOG_H_
