@@ -23,14 +23,14 @@ Any Arduino / ESP8266 / ESP32 board with an ADC (Analog Digital Converter).
 
 Arduino IDE | Examples | Erriez RobotDyn Keypad 3x4 Analog:
 
-* [PrintADC](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/PrintADC/PrintADC.ino)
-* [RobotDynKeypad3x4Analog](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/RobotDynKeypad3x4Analog/RobotDynKeypad3x4Analog.ino)
+* [ErriezPrintADC](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/ErriezPrintADC/ErriezPrintADC.ino)
+* [ErriezRobotDynKeypad3x4Analog](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/blob/master/examples/ErriezRobotDynKeypad3x4Analog/ErriezRobotDynKeypad3x4Analog.ino)
 
 
 ## Documentation
 
 - [Online HTML](https://Erriez.github.io/ErriezRobotDynKeypad3x4Analog)
-- [Download PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/gh-pages/latex/ErriezRobotDynKeypad3x4Analog.pdf)
+- [Download PDF](https://github.com/Erriez/ErriezRobotDynKeypad3x4Analog/raw/master/ErriezRobotDynKeypad3x4Analog.pdf)
 
 
 ## Usage
